@@ -1,0 +1,49 @@
+:root {
+  --textColor: #de4848;
+  --primaryBg: #f7f7f7;
+  --secondaryBg: #fff;
+  --bodyBg: #f2f1ed;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bodyBg);
+  color: var(--textColor);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flipCard {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 80px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2),
+    inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+}
+.top,
+.bottom {
+  height: 0.75em;
+  line-height: 1;
+  padding: 0.25em;
+  overflow: hidden;
+}
+.top {
+  background: var(--primaryBg);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+.bottom {
+  background: var(--secondaryBg);
+  display: flex;
+  align-items: flex-end;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
